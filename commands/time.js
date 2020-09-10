@@ -4,6 +4,8 @@ const moment = require('moment');
 module.exports = {
 	name: 'time',
 	description: 'Gives the current time in specified timezone.',
+	usage: '[<region>/<city/country>]',
+	example: 'asia shanghai',
 	guildOnly: true,
 	async execute(message, args) {
 		try {
