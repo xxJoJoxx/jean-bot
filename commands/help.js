@@ -35,10 +35,6 @@ module.exports = {
 			};
 
 			return message.channel.send({ embed: basicHelpEmbed })
-				.then(() => {
-					if (message.channel.type === 'dm') return;
-					message.reply('I\'ve sent you a DM with all my commands!');
-				})
 				.catch(error => {
 					console.error(`Could not send help DM to ${message.author.tag}.\n`, error);
 					message.reply('it seems like I can\'t DM you!');
@@ -73,6 +69,7 @@ module.exports = {
 		if (command.aliases) detailedHelpEmbed.fields.push({ name: 'Aliases:', value: `${command.aliases.join(', ')}` });
 		if (command.description) detailedHelpEmbed.fields.push({ name: 'Description:', value: `${command.description}` });
 		if (command.usage) detailedHelpEmbed.fields.push({ name: 'Usage:', value: `${process.env.COMMAND_PREFIX}${command.name} ${command.usage}` });
+		if (command.example) detailedHelpEmbed.fields.push({ name: 'Example:', value: `${process.env.COMMAND_PREFIX}${command.name} ${command.example}` });
 
 		detailedHelpEmbed.fields.push({ name:'Cooldown:', value:`${command.cooldown || 3} second(s)` });
 
