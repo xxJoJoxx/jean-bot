@@ -16,7 +16,7 @@ const cooldowns = new Discord.Collection();
 
 client.once('ready', () => {
 	console.log('Ready!');
-	client.user.setActivity('Under Construction ~', { type: 'PLAYING' });
+	client.user.setActivity('with time~', { type: 'PLAYING' });
 });
 
 client.on('message', message => {
