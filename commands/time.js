@@ -17,7 +17,7 @@ module.exports = {
 			if (error.response.status == 404) {
 				message.channel.send(`Error: ${error.response.data.error}, please enter a valid location, use \`!help\` for assistance`);
 			}
-			console.error(error.response);
+			console.error(error.response.statusText);
 		}
 	},
 };

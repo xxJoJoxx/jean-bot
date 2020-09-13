@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
+client.queue = new Map();
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -65,7 +66,7 @@ client.on('message', message => {
 	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 
 	try {
-		command.execute(message, args, client);
+		command.execute(message, args);
 	}
 	catch (error) {
 		console.error(error);
