@@ -5,8 +5,8 @@ const { stop } = require('../utils/stop');
 module.exports = {
 	name: 'music',
 	description: 'enables audio playback for a given youtube video',
-	usage: '[command]',
-	example: 'play',
+	usage: '[command] [params]',
+	example: 'play <video link>/<video name>',
 	guildOnly: true,
 	async execute(message, args) {
 
