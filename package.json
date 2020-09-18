@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
     "ffmpeg-static": "^4.2.7",
     "moment": "^2.27.0",
     "simple-youtube-api": "^5.2.1",
+    "twitter-lite": "^0.14.0",
     "ytdl-core": "^3.2.2",
     "ytdl-core-discord": "^1.2.1"
   }
