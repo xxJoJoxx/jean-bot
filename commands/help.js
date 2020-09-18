@@ -5,7 +5,6 @@ module.exports = {
 	usage: '[command name]',
 	cooldown: 5,
 	execute(message, args) {
-		// const data = [];
 		const { commands } = message.client;
 
 		if (!args.length) {
@@ -62,9 +61,6 @@ module.exports = {
 				icon_url: 'https://i.imgur.com/KcLf9OH.png',
 			},
 		};
-
-
-		// data.push(`**Name:** ${command.name}`);
 
 		if (command.aliases) detailedHelpEmbed.fields.push({ name: 'Aliases:', value: `${command.aliases.join(', ')}` });
 		if (command.description) detailedHelpEmbed.fields.push({ name: 'Description:', value: `${command.description}` });
